@@ -1,0 +1,12 @@
+{\"defaultData\":{\"name\":\"web创建销售机会\",\"opportunityNo\":\"业务流覆盖商机\",\"customerName\":{\"id\":\"(Web)创建客户_机会_合同_并删除@step_01_create_customer\",\"value\":\"kevin晴空\",\"key\":4},\"contactName\":\"\",\"products\":{\"productList\":[{\"id\":0,\"name\":\"海南-凯特芒\",\"num\":1,\"productPrice\":60,\"discount\":100,\"specification\":\"热带水果\",\"estimateCost\":10,\"productId\":800075},{\"id\":0,\"name\":\"杭州龙井茶\",\"num\":1,\"productPrice\":200,\"discount\":100,\"specification\":\"\",\"estimateCost\":7.7425,\"productId\":800065},{\"id\":0,\"name\":\"魔兽世界点卡\",\"num\":1,\"productPrice\":50,\"discount\":100,\"specification\":\"黑/50\",\"estimateCost\":0.142857,\"productId\":900089},{\"id\":0,\"name\":\"魔兽世界点卡\",\"num\":1,\"productPrice\":100,\"discount\":100,\"specification\":\"黑/100\",\"estimateCost\":42.8,\"productId\":900090},{\"id\":0,\"name\":\"魔兽世界点卡\",\"num\":1,\"productPrice\":51,\"discount\":100,\"specification\":\"红/50\",\"estimateCost\":22.5,\"productId\":900091},{\"id\":0,\"name\":\"魔兽世界点卡\",\"num\":1,\"productPrice\":101,\"discount\":100,\"specification\":\"红/100\",\"estimateCost\":15.333333,\"productId\":900092}]},\"totalMoney\":562,\"salesStageId\":\"9\",\"estimateEndTime\":\"2018-09-30\",\"importantDegree\":4,\"decisionMaker\":[],\"competitor\":\"竞争,对手\"},\"redundantData\":{},\"opUUID\":\"7a40e28be5874720b62a85eba458e76a\",\"corpid\":\"ding18b527cbc48f835535c2f4657eb6378f\",\"nowUserId\":\"manager9426\"}"
+
+
+
+
+{"defaultData":
+{"name":"商机报文","opportunityNo":"OPP.122","customerName":{"id":10303058,"value":"kevin晴空","key":1},
+"contactName":"",
+"products":{"productList":[]},"totalMoney":"333333","salesStageId":"4","estimateEndTime":"2018-10-01",
+"importantDegree":0,"decisionMaker":[],"competitor":""},
+"redundantData":{},"opUUID":"973151ef8ee846b89d528c24dd3b7f51","corpid":"ding18b527cbc48f835535c2f4657eb6378f",
+"nowUserId":"manager9426"}

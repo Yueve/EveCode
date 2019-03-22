@@ -1,0 +1,3726 @@
+. ::test_get_message_searchitem_on_web_default_parameter
+. ::test_get_message_searchitem_on_web_platform_input_dingtalk
+. ::test_get_message_searchitem_on_web_platform_input_all
+. ::test_get_message_searchitem_on_web_appid_input_2
+. ::test_get_message_searchitem_on_web_appid_input_3
+. ::test_get_message_searchitem_on_web_appid_input_4
+. ::test_get_message_searchitem_on_web_appid_input_5
+. ::test_get_message_searchitem_on_web_appid_input_6
+. ::test_get_message_searchitem_on_web_appid_input_7
+. ::test_get_message_searchitem_on_web_appid_input_8
+. ::test_get_message_searchitem_on_web_appid_input_pass
+. ::test_get_message_searchitem_on_web_saasmark_input_2
+. ::test_get_message_grouplist_on_web_Default_parameter
+. ::test_get_message_grouplist_on_web_platform_input_dingtalk
+. ::test_get_message_grouplist_on_web_platform_input_all
+. ::test_get_message_grouplist_on_web_frontdev_input_0
+. ::test_get_message_detail_searchlist_on_web_Default_parameter
+. ::test_get_message_detail_searchlist_on_web_isremind_input_1
+. ::test_get_message_detail_searchlist_on_web_timetags_input_2
+. ::test_get_message_detail_searchlist_on_web_timetags_input_3
+. ::test_get_message_detail_searchlist_on_web_timetags_input_4
+. ::test_get_message_detail_searchlist_on_web_platform_input_dingtalk
+. ::test_get_message_detail_searchlist_on_web_platform_input_all
+. ::test_get_message_detail_searchlist_on_web_statustags_input_2
+. ::test_get_message_detail_searchlist_on_web_statustags_input_3
+. ::test_get_message_detail_searchlist_on_web_isdownload_input_0
+. ::test_get_message_detail_searchlist_on_web_appid_input_2
+. ::test_get_message_detail_searchlist_on_web_appid_input_3
+. ::test_get_message_detail_searchlist_on_web_appid_input_4
+. ::test_get_message_detail_searchlist_on_web_appid_input_5
+. ::test_get_message_detail_searchlist_on_web_appid_input_6
+. ::test_get_message_detail_searchlist_on_web_appid_input_7
+. ::test_get_message_detail_searchlist_on_web_appid_input_8
+. ::test_get_message_detail_searchlist_on_web_appid_input_pass
+. ::test_get_message_detail_searchlist_on_web_saasmark_input_2
+F ::test_get_message_readall_on_web_Default_parameter
+ def test_get_message_readall_on_web_Default_parameter():
+ >       basic.exec_web_request("get_message_readall_on_web的默认入参")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:146: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的默认入参'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_platform_input_dingtalk
+ def test_get_message_readall_on_web_platform_input_dingtalk():
+ >       basic.exec_web_request("get_message_readall_on_web的platform输入dingtalk")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:150: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的platform输入dingtalk'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_platform_input_all
+ def test_get_message_readall_on_web_platform_input_all():
+ >       basic.exec_web_request("get_message_readall_on_web的platform输入all")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:154: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的platform输入all'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_frontdev_input_0
+ def test_get_message_readall_on_web_frontdev_input_0():
+ >       basic.exec_web_request("get_message_readall_on_web的frontDev输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:158: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的frontDev输入0'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_2
+ def test_get_message_readall_on_web_appid_input_2():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入2")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:162: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入2'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_3
+ def test_get_message_readall_on_web_appid_input_3():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入3")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:166: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入3'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_4
+ def test_get_message_readall_on_web_appid_input_4():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入4")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:170: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入4'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_5
+ def test_get_message_readall_on_web_appid_input_5():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入5")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:174: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入5'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_6
+ def test_get_message_readall_on_web_appid_input_6():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入6")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:178: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入6'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_7
+ def test_get_message_readall_on_web_appid_input_7():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入7")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:182: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入7'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_readall_on_web_appid_input_8
+ def test_get_message_readall_on_web_appid_input_8():
+ >       basic.exec_web_request("get_message_readall_on_web的appId输入8")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:186: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web的appId输入8'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_readall_on_web_appid_input_pass
+. ::test_get_message_readall_on_web_saasmark_input_2
+F ::test_get_message_unread_on_web_Default_parameter
+ def test_get_message_unread_on_web_Default_parameter():
+ >       basic.exec_web_request("get_message_unread_on_web的默认入参")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:198: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web的默认入参'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_unread_on_web_platform_input_dingtalk
+ def test_get_message_unread_on_web_platform_input_dingtalk():
+ >       basic.exec_web_request("get_message_unread_on_web的platform输入dingtalk")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:202: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web的platform输入dingtalk'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_unread_on_web_platform_input_all
+ def test_get_message_unread_on_web_platform_input_all():
+ >       basic.exec_web_request("get_message_unread_on_web的platform输入all")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:206: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web的platform输入all'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_unread_on_web_frontdev_input_0
+ def test_get_message_unread_on_web_frontdev_input_0():
+ >       basic.exec_web_request("get_message_unread_on_web的frontDev输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:210: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web的frontDev输入0'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_menulist_on_web_Default_parameter
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_menulist_on_web_Default_parameter():
+ >       basic.exec_web_request("get_message_menuList_on_web的默认入参")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:214: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_menulist_on_web_platform_input_dingtalk
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_menulist_on_web_platform_input_dingtalk():
+ >       basic.exec_web_request("get_message_menuList_on_web的platform输入dingtalk")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:218: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_menulist_on_web_platform_input_all
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_menulist_on_web_platform_input_all():
+ >       basic.exec_web_request("get_message_menuList_on_web的platform输入all")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:222: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_menulist_on_web_appid_input_2
+ def test_get_message_menulist_on_web_appid_input_2():
+ >       basic.exec_web_request("get_message_menuList_on_web的appId输入2")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:226: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_menuList_on_web的appId输入2'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+ >       api_url = get_api_url(case_data['api_id'])
+ E       TypeError: 'NoneType' object is not subscriptable
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:132: TypeError
+F ::test_get_message_menulist_on_web_appid_input_3
+ def test_get_message_menulist_on_web_appid_input_3():
+ >       basic.exec_web_request("get_message_menuList_on_web的appId输入3")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:230: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_menuList_on_web的appId输入3'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+ >       api_url = get_api_url(case_data['api_id'])
+ E       TypeError: 'NoneType' object is not subscriptable
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:132: TypeError
+F ::test_get_message_menulist_on_web_saasmark_input_2
+ def test_get_message_menulist_on_web_saasmark_input_2():
+ >       basic.exec_web_request("get_message_menuList_on_web的saasMark输入2")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:234: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_menuList_on_web的saasMark输入2'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+ >       api_url = get_api_url(case_data['api_id'])
+ E       TypeError: 'NoneType' object is not subscriptable
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:132: TypeError
+F ::test_get_message_menulist_on_web_frontdev_input_0
+ def test_get_message_menulist_on_web_frontdev_input_0():
+ >       basic.exec_web_request("get_message_menuList_on_web的frontDev输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:238: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_menuList_on_web的frontDev输入0'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+ >       api_url = get_api_url(case_data['api_id'])
+ E       TypeError: 'NoneType' object is not subscriptable
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:132: TypeError
+F ::test_get_message_detaillist_on_web_platform_input_dingtalk
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_detaillist_on_web_platform_input_dingtalk():
+ >       basic.exec_web_request("get_message_detailList_on_web的platform输入dingtalk")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:242: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_detaillist_on_web_platform_input_all
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_detaillist_on_web_platform_input_all():
+ >       basic.exec_web_request("get_message_detailList_on_web的platform输入all")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:246: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_detaillist_on_web_saasmark_input_paas
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_detaillist_on_web_saasmark_input_paas():
+ >       basic.exec_web_request("get_message_detailList_on_web的saasMark输入paas")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:250: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_detaillist_on_web_frontdev_input_0
+ def test_get_message_detaillist_on_web_frontdev_input_0():
+ >       basic.exec_web_request("get_message_detailList_on_web的frontDev输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:254: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_detailList_on_web的frontDev输入0'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+ >       api_url = get_api_url(case_data['api_id'])
+ E       TypeError: 'NoneType' object is not subscriptable
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:132: TypeError
+F ::test_get_message_set_save_on_web_Default_parameter
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_set_save_on_web_Default_parameter():
+ >       basic.exec_web_request("get_message_set_save_on_web的默认入参")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:258: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_set_save_on_web_platform_input_dingtalk
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_set_save_on_web_platform_input_dingtalk():
+ >       basic.exec_web_request("get_message_set_save_on_web的platform输入dingtalk")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:262: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_set_save_on_web_platform_input_all
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_set_save_on_web_platform_input_all():
+ >       basic.exec_web_request("get_message_set_save_on_web的platform输入all")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:266: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_set_save_on_web_saasmark_input_paas
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_set_save_on_web_saasmark_input_paas():
+ >       basic.exec_web_request("get_message_set_save_on_web的saasMark输入paas")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:270: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_set_save_on_web_frontdev_input_0
+ def test_get_message_set_save_on_web_frontdev_input_0():
+ >       basic.exec_web_request("get_message_set_save_on_web的frontDev输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:274: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_set_save_on_web的frontDev输入0'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+ >       api_url = get_api_url(case_data['api_id'])
+ E       TypeError: 'NoneType' object is not subscriptable
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:132: TypeError
+F ::test_get_message_enable_on_web_Default_parameter
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_enable_on_web_Default_parameter():
+ >       basic.exec_web_request("get_message_enable_on_web的默认入参")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:278: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_enable_on_web_platform_input_dingtalk
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_enable_on_web_platform_input_dingtalk():
+ >       basic.exec_web_request("get_message_enable_on_web的platform输入dingtalk")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:282: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_enable_on_web_platform_input_all
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_enable_on_web_platform_input_all():
+ >       basic.exec_web_request("get_message_enable_on_web的platform输入all")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:286: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_enable_on_web_saasmark_input_paas
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_enable_on_web_saasmark_input_paas():
+ >       basic.exec_web_request("get_message_enable_on_web的saasMark输入paas")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:290: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_enable_on_web_frontdev_input_0
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_enable_on_web_frontdev_input_0():
+ >       basic.exec_web_request("get_message_enable_on_web的frontDev输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:294: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+F ::test_get_message_enable_on_web_enable_input_0
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+ >           scheme, auth, host, port, path, query, fragment = parse_url(url)
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:379: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ url = '192.168.10.180:5555None'
+ 
+     def parse_url(url):
+         """
+         Given a url, return a parsed :class:`.Url` namedtuple. Best-effort is
+         performed to parse incomplete urls. Fields not provided will be None.
+     
+         Partly backwards-compatible with :mod:`urlparse`.
+     
+         Example::
+     
+             >>> parse_url('http://google.com/mail/')
+             Url(scheme='http', host='google.com', port=None, path='/mail/', ...)
+             >>> parse_url('google.com:80')
+             Url(scheme=None, host='google.com', port=80, path=None, ...)
+             >>> parse_url('/foo?bar')
+             Url(scheme=None, host=None, port=None, path='/foo', query='bar', ...)
+         """
+     
+         # While this code has overlap with stdlib's urlparse, it is much
+         # simplified for our needs and less annoying.
+         # Additionally, this implementations does silly things to be optimal
+         # on CPython.
+     
+         if not url:
+             # Empty
+             return Url()
+     
+         scheme = None
+         auth = None
+         host = None
+         port = None
+         path = None
+         fragment = None
+         query = None
+     
+         # Scheme
+         if '://' in url:
+             scheme, url = url.split('://', 1)
+     
+         # Find the earliest Authority Terminator
+         # (http://tools.ietf.org/html/rfc3986#section-3.2)
+         url, path_, delim = split_first(url, ['/', '?', '#'])
+     
+         if delim:
+             # Reassemble the path
+             path = delim + path_
+     
+         # Auth
+         if '@' in url:
+             # Last '@' denotes end of auth part
+             auth, url = url.rsplit('@', 1)
+     
+         # IPv6
+         if url and url[0] == '[':
+             host, url = url.split(']', 1)
+             host += ']'
+     
+         # Port
+         if ':' in url:
+             _host, port = url.split(':', 1)
+     
+             if not host:
+                 host = _host
+     
+             if port:
+                 # If given, ports must be integers. No whitespace, no plus or
+                 # minus prefixes, no non-integer digits such as ^2 (superscript).
+                 if not port.isdigit():
+ >                   raise LocationParseError(url)
+ E                   urllib3.exceptions.LocationParseError: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\urllib3\util\url.py:199: LocationParseError
+ 
+ During handling of the above exception, another exception occurred:
+ 
+     def test_get_message_enable_on_web_enable_input_0():
+ >       basic.exec_web_request("get_message_enable_on_web的enable输入0")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:298: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:138: in exec_web_request
+     request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+ d:\tools\python\lib\site-packages\requests\sessions.py:581: in post
+     return self.request('POST', url, data=data, json=json, **kwargs)
+ d:\tools\python\lib\site-packages\requests\sessions.py:519: in request
+     prep = self.prepare_request(req)
+ d:\tools\python\lib\site-packages\requests\sessions.py:462: in prepare_request
+     hooks=merge_hooks(request.hooks, self.hooks),
+ d:\tools\python\lib\site-packages\requests\models.py:313: in prepare
+     self.prepare_url(url, params)
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ self = <PreparedRequest [POST]>, url = 'http://192.168.10.180:5555None'
+ params = OrderedDict()
+ 
+     def prepare_url(self, url, params):
+         """Prepares the given HTTP URL."""
+         #: Accept objects that have string representations.
+         #: We're unable to blindly call unicode/str functions
+         #: as this will include the bytestring indicator (b'')
+         #: on python 3.x.
+         #: https://github.com/requests/requests/pull/2238
+         if isinstance(url, bytes):
+             url = url.decode('utf8')
+         else:
+             url = unicode(url) if is_py2 else str(url)
+     
+         # Remove leading whitespaces from url
+         url = url.lstrip()
+     
+         # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+         # `data` etc to work around exceptions from `url_parse`, which
+         # handles RFC 3986 only.
+         if ':' in url and not url.lower().startswith('http'):
+             self.url = url
+             return
+     
+         # Support for unicode domain names and paths.
+         try:
+             scheme, auth, host, port, path, query, fragment = parse_url(url)
+         except LocationParseError as e:
+ >           raise InvalidURL(*e.args)
+ E           requests.exceptions.InvalidURL: Failed to parse: 192.168.10.180:5555None
+ 
+ d:\tools\python\lib\site-packages\requests\models.py:381: InvalidURL
+. ::test_get_message_searchitem_on_web_losing_key_corpid
+. ::test_get_message_searchitem_on_web_losing_corpid_value
+. ::test_get_message_searchitem_on_web_transfer_corpid_to_list
+. ::test_get_message_searchitem_on_web_losing_key_userid
+. ::test_get_message_searchitem_on_web_losing_userid_value
+. ::test_get_message_searchitem_on_web_transfer_userid_to_list
+. ::test_get_message_searchitem_on_web_losing_key_platform
+. ::test_get_message_searchitem_on_web_losing_platform_value
+. ::test_get_message_searchitem_on_web_transfer_platform_to_list
+. ::test_get_message_searchitem_on_web_losing_key_frontdev
+. ::test_get_message_searchitem_on_web_losing_frontdev_value
+. ::test_get_message_searchitem_on_web_transfer_frontdev_to_list
+. ::test_get_message_searchitem_on_web_losing_key_appid
+. ::test_get_message_searchitem_on_web_losing_appid_value
+F ::test_get_message_searchitem_on_web_transfer_appid_to_list
+ def test_get_message_searchitem_on_web_transfer_appid_to_list():
+ >       basic.exec_web_request("get_message_searchItem_on_web中appId的数字类型value值转变为list格式")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:358: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_searchItem_on_web中appId的数字类型value值转变为list格式'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <500> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_searchitem_on_web_losing_key_saasmark
+. ::test_get_message_searchitem_on_web_losing_saasmark_value
+. ::test_get_message_searchitem_on_web_transfer_saasmark_to_list
+. ::test_get_message_grouplist_on_web_losing_key_corpid
+. ::test_get_message_grouplist_on_web_losing_corpid_value
+. ::test_get_message_grouplist_on_web_transfer_corpid_to_list
+. ::test_get_message_grouplist_on_web_losing_key_userid
+. ::test_get_message_grouplist_on_web_losing_userid_value
+. ::test_get_message_grouplist_on_web_transfer_userid_to_list
+. ::test_get_message_grouplist_on_web_losing_key_platform
+. ::test_get_message_grouplist_on_web_losing_platform_value
+. ::test_get_message_grouplist_on_web_transfer_platform_to_list
+. ::test_get_message_grouplist_on_web_losing_key_frontdev
+. ::test_get_message_grouplist_on_web_losing_frontdev_value
+. ::test_get_message_grouplist_on_web_transfer_frontdev_to_list
+. ::test_get_message_readall_on_web_losing_key_corpid
+. ::test_get_message_readall_on_web_losing_corpid_value
+. ::test_get_message_readall_on_web_transfer_corpid_to_list
+. ::test_get_message_readall_on_web_losing_key_userid
+. ::test_get_message_readall_on_web_losing_userid_value
+. ::test_get_message_readall_on_web_transfer_userid_to_list
+. ::test_get_message_readall_on_web_losing_key_platform
+. ::test_get_message_readall_on_web_losing_platform_value
+F ::test_get_message_readall_on_web_transfer_platform_to_list
+ def test_get_message_readall_on_web_transfer_platform_to_list():
+ >       basic.exec_web_request("get_message_readall_on_web中platform的字符串类型value值转变为list格式")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:454: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_readall_on_web中platform的字符串类型value值转变为list格式'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_readall_on_web_losing_key_frontdev
+. ::test_get_message_readall_on_web_losing_frontdev_value
+. ::test_get_message_readall_on_web_transfer_frontdev_to_list
+. ::test_get_message_readall_on_web_losing_key_appid
+. ::test_get_message_readall_on_web_losing_appid_value
+. ::test_get_message_readall_on_web_transfer_appid_to_list
+. ::test_get_message_readall_on_web_losing_key_saasmark
+. ::test_get_message_readall_on_web_losing_saasmark_value
+. ::test_get_message_readall_on_web_transfer_saasmark_to_list
+. ::test_get_message_menulist_on_web_losing_key_corpid
+. ::test_get_message_menulist_on_web_losing_corpid_value
+. ::test_get_message_menulist_on_web_transfer_corpid_to_list
+. ::test_get_message_menulist_on_web_losing_key_userid
+. ::test_get_message_menulist_on_web_losing_userid_value
+. ::test_get_message_menulist_on_web_transfer_userid_to_list
+. ::test_get_message_menulist_on_web_losing_key_platform
+. ::test_get_message_menulist_on_web_losing_platform_value
+. ::test_get_message_menulist_on_web_transfer_platform_to_list
+. ::test_get_message_menulist_on_web_losing_key_appid
+. ::test_get_message_menulist_on_web_losing_appid_value
+. ::test_get_message_menulist_on_web_transfer_appid_to_list
+. ::test_get_message_menulist_on_web_losing_key_saasmark
+. ::test_get_message_menulist_on_web_losing_saasmark_value
+. ::test_get_message_menulist_on_web_transfer_saasmark_to_list
+. ::test_get_message_menulist_on_web_losing_key_frontdev
+. ::test_get_message_menulist_on_web_losing_frontdev_value
+. ::test_get_message_menulist_on_web_transfer_frontdev_to_list
+. ::test_get_message_detaillist_on_web_losing_key_corpid
+. ::test_get_message_detaillist_on_web_losing_corpid_value
+. ::test_get_message_detaillist_on_web_transfer_corpid_to_list
+. ::test_get_message_detaillist_on_web_losing_key_userid
+. ::test_get_message_detaillist_on_web_losing_userid_value
+. ::test_get_message_detaillist_on_web_transfer_userid_to_list
+. ::test_get_message_detaillist_on_web_losing_key_platform
+. ::test_get_message_detaillist_on_web_losing_platform_value
+. ::test_get_message_detaillist_on_web_transfer_platform_to_list
+. ::test_get_message_detaillist_on_web_losing_key_menuid
+. ::test_get_message_detaillist_on_web_losing_menuid_value
+F ::test_get_message_detaillist_on_web_transfer_menuid_to_list
+ def test_get_message_detaillist_on_web_transfer_menuid_to_list():
+ >       basic.exec_web_request("get_message_detailList_on_web中menuId的数字类型value值转变为list格式")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:610: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_detailList_on_web中menuId的数字类型value值转变为list格式'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <500> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_detaillist_on_web_losing_key_saasids
+. ::test_get_message_detaillist_on_web_losing_saasids_value
+. ::test_get_message_detaillist_on_web_losing_key_saasmark
+. ::test_get_message_detaillist_on_web_losing_saasmark_value
+. ::test_get_message_detaillist_on_web_transfer_saasmark_to_list
+. ::test_get_message_detaillist_on_web_losing_key_frontdev
+. ::test_get_message_detaillist_on_web_losing_frontdev_value
+. ::test_get_message_detaillist_on_web_transfer_frontdev_to_list
+. ::test_get_message_set_save_on_web_losing_key_corpid
+. ::test_get_message_set_save_on_web_losing_corpid_value
+. ::test_get_message_set_save_on_web_transfer_corpid_to_list
+. ::test_get_message_set_save_on_web_losing_key_userid
+. ::test_get_message_set_save_on_web_losing_userid_value
+. ::test_get_message_set_save_on_web_transfer_userid_to_list
+. ::test_get_message_set_save_on_web_losing_key_platform
+. ::test_get_message_set_save_on_web_losing_platform_value
+. ::test_get_message_set_save_on_web_transfer_platform_to_list
+. ::test_get_message_set_save_on_web_losing_key_saasmark
+. ::test_get_message_set_save_on_web_losing_saasmark_value
+. ::test_get_message_set_save_on_web_transfer_saasmark_to_list
+. ::test_get_message_set_save_on_web_losing_key_frontdev
+. ::test_get_message_set_save_on_web_losing_frontdev_value
+. ::test_get_message_set_save_on_web_transfer_frontdev_to_list
+. ::test_get_message_set_save_on_web_losing_key_pushobject
+. ::test_get_message_set_save_on_web_losing_pushobject_value
+. ::test_get_message_set_save_on_web_transfer_pushobject_to_list
+. ::test_get_message_set_save_on_web_losing_key_pushtime
+. ::test_get_message_set_save_on_web_losing_pushtime_value
+. ::test_get_message_set_save_on_web_transfer_pushtime_to_list
+. ::test_get_message_set_save_on_web_losing_key_id
+. ::test_get_message_set_save_on_web_losing_id_value
+. ::test_get_message_set_save_on_web_transfer_id_to_list
+. ::test_get_message_set_save_on_web_losing_key_enable
+. ::test_get_message_set_save_on_web_losing_enable_value
+. ::test_get_message_set_save_on_web_transfer_enable_to_list
+. ::test_get_message_set_save_on_web_losing_key_refentity
+. ::test_get_message_set_save_on_web_losing_refentity_value
+. ::test_get_message_set_save_on_web_transfer_refentity_to_list
+. ::test_get_message_set_save_on_web_losing_key_attrentity
+. ::test_get_message_set_save_on_web_losing_attrentity_value
+. ::test_get_message_set_save_on_web_transfer_attrentity_to_list
+. ::test_get_message_set_save_on_web_losing_key_subtype
+. ::test_get_message_set_save_on_web_losing_subtype_value
+. ::test_get_message_set_save_on_web_transfer_subtype_to_list
+. ::test_get_message_set_save_on_web_losing_key_type
+. ::test_get_message_set_save_on_web_losing_type_value
+. ::test_get_message_set_save_on_web_transfer_type_to_list
+. ::test_get_message_enable_on_web_losing_key_corpid
+. ::test_get_message_enable_on_web_losing_corpid_value
+. ::test_get_message_enable_on_web_transfer_corpid_to_list
+. ::test_get_message_enable_on_web_losing_key_userid
+. ::test_get_message_enable_on_web_losing_userid_value
+. ::test_get_message_enable_on_web_transfer_userid_to_list
+. ::test_get_message_enable_on_web_losing_key_platform
+. ::test_get_message_enable_on_web_losing_platform_value
+. ::test_get_message_enable_on_web_transfer_platform_to_list
+. ::test_get_message_enable_on_web_losing_key_saasmark
+. ::test_get_message_enable_on_web_losing_saasmark_value
+. ::test_get_message_enable_on_web_transfer_saasmark_to_list
+. ::test_get_message_enable_on_web_losing_key_frontdev
+. ::test_get_message_enable_on_web_losing_frontdev_value
+. ::test_get_message_enable_on_web_transfer_frontdev_to_list
+. ::test_get_message_enable_on_web_losing_key_id
+. ::test_get_message_enable_on_web_losing_id_value
+. ::test_get_message_enable_on_web_transfer_id_to_list
+. ::test_get_message_enable_on_web_losing_key_enable
+. ::test_get_message_enable_on_web_losing_enable_value
+. ::test_get_message_enable_on_web_transfer_enable_to_list
+. ::test_get_message_unread_on_web_losing_key_corpid
+F ::test_get_message_unread_on_web_losing_corpid_value
+ def test_get_message_unread_on_web_losing_corpid_value():
+ >       basic.exec_web_request("get_message_unread_on_web中corpid的value缺失")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:890: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web中corpid的value缺失'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_unread_on_web_transfer_corpid_to_list
+. ::test_get_message_unread_on_web_losing_key_userid
+F ::test_get_message_unread_on_web_losing_userid_value
+ def test_get_message_unread_on_web_losing_userid_value():
+ >       basic.exec_web_request("get_message_unread_on_web中userId的value缺失")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:902: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web中userId的value缺失'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_unread_on_web_transfer_userid_to_list
+. ::test_get_message_unread_on_web_losing_key_platform
+F ::test_get_message_unread_on_web_losing_platform_value
+ def test_get_message_unread_on_web_losing_platform_value():
+ >       basic.exec_web_request("get_message_unread_on_web中platform的value缺失")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:914: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web中platform的value缺失'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+F ::test_get_message_unread_on_web_transfer_platform_to_list
+ def test_get_message_unread_on_web_transfer_platform_to_list():
+ >       basic.exec_web_request("get_message_unread_on_web中platform的字符串类型value值转变为list格式")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:918: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_unread_on_web中platform的字符串类型value值转变为list格式'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <404> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError
+. ::test_get_message_unread_on_web_losing_key_frontdev
+. ::test_get_message_unread_on_web_losing_frontdev_value
+. ::test_get_message_unread_on_web_transfer_frontdev_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_frontdev
+. ::test_get_message_detail_searchlist_on_web_losing_frontdev_value
+. ::test_get_message_detail_searchlist_on_web_transfer_frontdev_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_corpid
+. ::test_get_message_detail_searchlist_on_web_losing_corpid_value
+. ::test_get_message_detail_searchlist_on_web_transfer_corpid_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_userid
+. ::test_get_message_detail_searchlist_on_web_losing_userid_value
+. ::test_get_message_detail_searchlist_on_web_transfer_userid_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_page
+. ::test_get_message_detail_searchlist_on_web_losing_page_value
+. ::test_get_message_detail_searchlist_on_web_transfer_page_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_pagesize
+. ::test_get_message_detail_searchlist_on_web_losing_pagesize_value
+. ::test_get_message_detail_searchlist_on_web_transfer_pagesize_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_isremind
+. ::test_get_message_detail_searchlist_on_web_losing_isremind_value
+. ::test_get_message_detail_searchlist_on_web_transfer_isremind_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_timetags
+. ::test_get_message_detail_searchlist_on_web_losing_timetags_value
+. ::test_get_message_detail_searchlist_on_web_transfer_timetags_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_platform
+. ::test_get_message_detail_searchlist_on_web_losing_platform_value
+. ::test_get_message_detail_searchlist_on_web_transfer_platform_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_menutags
+. ::test_get_message_detail_searchlist_on_web_losing_menutags_value
+. ::test_get_message_detail_searchlist_on_web_transfer_menutags_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_refentity
+. ::test_get_message_detail_searchlist_on_web_losing_refentity_value
+. ::test_get_message_detail_searchlist_on_web_losing_key_type
+. ::test_get_message_detail_searchlist_on_web_losing_type_value
+. ::test_get_message_detail_searchlist_on_web_losing_key_subtype
+. ::test_get_message_detail_searchlist_on_web_losing_subtype_value
+. ::test_get_message_detail_searchlist_on_web_losing_key_statustags
+. ::test_get_message_detail_searchlist_on_web_losing_statustags_value
+. ::test_get_message_detail_searchlist_on_web_transfer_statustags_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_isdownload
+. ::test_get_message_detail_searchlist_on_web_losing_isdownload_value
+. ::test_get_message_detail_searchlist_on_web_transfer_isdownload_to_list
+. ::test_get_message_detail_searchlist_on_web_losing_key_appid
+. ::test_get_message_detail_searchlist_on_web_losing_appid_value
+F ::test_get_message_detail_searchlist_on_web_transfer_appid_to_list
+ def test_get_message_detail_searchlist_on_web_transfer_appid_to_list():
+ >       basic.exec_web_request("get_message_detail_searchlist_on_web中appId的数字类型value值转变为list格式")
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\Case\test_web_api.py:1098: 
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:151: in exec_web_request
+     raise exception_info
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ 
+ case_name = 'get_message_detail_searchlist_on_web中appId的数字类型value值转变为list格式'
+ 
+     def exec_web_request(case_name):
+         # 根据用例名称获得用例数据
+         case_data = get_case_data(case_name)
+         # 获得接口的URL地址
+         api_url = get_api_url(case_data['api_id'])
+         request_url = str(web_host) + str(api_url)
+         # 处理请求头
+         request_header = handle_web_request_head_referer()
+         # 处理请求的Body部分
+         request_content = integrate_web_request_content(case_name)
+         request_result = web_session.post(headers=request_header, data=request_content, url=request_url)
+         logging_url = "接口URL地址：\t" + str(request_url)
+         logging_request_data = "请求参数：\t" + str(request_content)
+         logging_status_code = "HTTP响应的状态码：\t"+ str(request_result.status_code)
+         logging_response = "接口响应报文内容：\t" + str(request_result.text)
+         logging.debug(logging_url)
+         logging.debug(logging_request_data)
+         logging.debug(logging_status_code)
+         logging.debug(logging_response)
+         print("哈哈哈哈哈哈哈哈哈")
+         try:
+ >           assert_that(request_result.status_code).is_equal_to(200)
+ E           AssertionError: Expected <500> to be equal to <200>, but was not.
+ 
+ D:\apitest\XbbApi-20181105\XbbApi\BasicFun\basic.py:149: AssertionError

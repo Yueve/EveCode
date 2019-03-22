@@ -1,0 +1,14 @@
+{'_id': ObjectId('5ba9ff24a2fa78363711e899'), 'case_steps':
+[
+  {'step_name': 'create_customer_on_web', 'api_id': 'save_customer', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'create_connector_on_web', 'api_id': 'save_connector_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '更新了几个数组？', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'create_opportunity_on_web', 'api_id': 'save_opportunity_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'create_order_on_web', 'api_id': 'save_order_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'create_follow_record_on_web', 'api_id': 'save_order_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'delete_follow_record_on_web', 'api_id': 'delete_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'delete_order_on_web', 'api_id': 'save_order_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'delete_opportunity_on_web', 'api_id': 'save_order_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'},
+  {'step_name': 'delete_customer_on_web', 'api_id': 'save_order_on_web', 'step_param': '', 'request_header': '', 'key_need_to_save': '', 'saved_value': '', 'is_sleep': '1', 'expected_result': '', 'actual_result': '', 'parent_case_name': 'create_return_fee_order'}]}
+
+
+
